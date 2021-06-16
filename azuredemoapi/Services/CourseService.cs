@@ -1,20 +1,26 @@
-﻿using azuredemoapi.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// Authored By CourseService.cs, Date 16-06-2021
 
 namespace azuredemoapi.Services
-{
-    public class CourseService
     {
-        public List<Course> GetCourses()
+    using azuredemoapi.models;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// Defines the <see cref="CourseService" />.
+    /// </summary>
+    public class CourseService
         {
+        /// <summary>
+        /// The GetCourses.
+        /// </summary>
+        /// <returns>The <see cref="List{Course}"/>.</returns>
+        public List<Course> GetCourses ()
+            {
             return new List<Course>
             {
                 new Course
                 {
-                    Id =1,
+                    Id = 1,
                     Name = "english",
                     Teacher = "Beta"
                 },
@@ -37,6 +43,6 @@ namespace azuredemoapi.Services
                     Teacher = "AB"
                 }
             };
+            }
         }
     }
-}
